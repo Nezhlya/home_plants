@@ -1,0 +1,288 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #333;
+  font-family: 'Caveat', cursive;
+font-family: 'Forum', serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color:mistyrose;
+  background-attachment: fixed;
+}
+
+h1 {
+  padding:5%;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-family: 'Forum', serif;
+  transform: scale(1.5);
+  animation: scale 5s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+h3{
+  text-align: justify;
+  padding: 5%;
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(5) {
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(6) {
+  animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(7) {
+  animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(8) {
+  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(9) {
+  animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(10) {
+  animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+.header{
+  color: mistyrose;
+  padding:5%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('images/inanc-avadit-FVe--PZ3YT4-unsplash.jpg');
+background-size: cover;
+background-position: top;
+}
+.content {
+  display: flex;
+  margin: 0 auto;
+  padding-bottom:15%;;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.heading {
+  width: 100%;
+  margin-left: 1rem;
+  font-weight: 900;
+  font-size: 1.618rem;
+  text-transform: uppercase;
+  letter-spacing: .1ch;
+  line-height: 1;
+  padding-bottom: .5em;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.heading:after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  bottom: 0;
+}
+
+.card {
+  color: inherit;
+  cursor: pointer;
+  width: calc(33% - 2rem);
+  min-width: calc(33% - 2rem);
+  height: 400px;
+  min-height: 400px;
+  perspective: 1000px;
+  margin: 1rem;
+  position: relative;
+}
+
+.front,
+.back {
+  display: flex;
+  border-radius: 6px;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: ease-in-out 600ms;
+  overflow: hidden;
+}
+
+.front {
+  background-size: cover;
+  background-blend-mode: overlay;
+  padding: 2rem;
+  font-size: 1.618rem;
+  font-weight: 600;
+  overflow: hidden;
+  font-family: Poppins, sans-serif;
+}
+
+.front:before {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.card:nth-child(even):hover .front {
+  transform: rotateY(-180deg);
+}
+
+.back {
+  background:rgba(250, 250, 250, 0.488);
+  transform: rotateY(-180deg);
+  padding: 0 2em;
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+
+.card:nth-child(even) .back {
+  transform: rotateY(180deg);
+}
+
+.card:nth-child(even):hover .back {
+  transform: rotateY(0deg);
+}
+
+.button {
+  height: 40px;
+  transform: translateZ;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-weight: bold;
+  color:black;
+  padding: .5em 1em;
+  border-radius: 100px;
+  font: inherit;
+  border: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 300ms ease;
+}
+
+.button:before {
+  transition: 300ms ease;
+  position: absolute;
+  display: block;
+  border-radius: 100px;
+  left: 10px;
+  top: 16px;
+}
+
+footer {
+  color:mistyrose;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('images/inanc-avadit-FVe--PZ3YT4-unsplash.jpg');
+background-position: bottom;
+  background-size: cover;
+  padding: 0 50px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  font-size: smaller;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+footer:hover {
+  height: 250px;
+  padding: 0 50px 20px;
+  border-radius: 0;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+@media (max-width: 499px), (max-height: 599px) {
+  body * {
+    display: none;
+  }
+  body::after {
+    content: "Your screen is too small! Try full screen view or resize your window.";
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: calc(50% - 2rem);
+    min-width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: calc(100% - 2rem);
+    min-width: calc(100% - 2rem);
+  }
+}
+
+  
